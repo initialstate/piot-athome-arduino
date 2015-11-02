@@ -29,6 +29,7 @@ String bucketKey = "Hub_Motion";
 // How many signals are in your stream? You can have as few or as many as you want
 const int NUM_SIGNALS = 1;
 // What are the names of your signals (i.e. "Temperature", "Humidity", etc.)
+// CANNOT CONTAIN SPACES
 String signalName[NUM_SIGNALS] = {":wave:Motion"};
 // This array is to store our signal data later
 String signalData[NUM_SIGNALS];
