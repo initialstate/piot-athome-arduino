@@ -1,0 +1,214 @@
+  ��
+�a�?���<�"���C�
+��B =u�A�,@C�/�̺��C���Thinker TecAT+RST
+
+
+OK
+Hf��:��'�h7���M!����q"�`���C���Thinker Technology Co. Ltd.
+
+ready
+
+AT+CSYSWDTENABLE
+
+WDT Enabled
+Module is ready.
+
+OK
+
+
+AT+GMR
+
+
+AT+CWMODE=3
+
+
+busy p...
+
+AT version:0.21.0.0
+
+SDK version:0.9.5
+
+
+OK
+Connected to WiFi.
+
+
+AT+CIPMUX=1
+
+
+
+
+OK
+AT+CWJAP="WiFi_SSID","WiFi_Password"
+
+
+ ���a���gBVx�AT+CIPSTART="TCP","Hub_IP_Address",8080
+
+CONNECT
+
+OK
+AT+CIPSTART="TCP","Hub_IP_Address",8080
+
+ALREADY CONNECTED
+
+
+ERROR
+AT+CIPSTATUS
+
+STATUS:3
+POST http://Hub_IP_Address/Hub_Test/Signal1
+Content-Type: text/plain
+Content-Length: 2
+
+18
+
++CIPSTATUS:0,"TCP","Hub_IP_Address",8080,0
+
+OK
+AT+CIPSEND=90
+
+
+OK
+>
+ POST http://Hub_IP_Address/Hub_Test/Signal1
+Content-Type: text/plain
+Content-Length: 2
+
+18
+busy s...
+
+SEND OK
+
++IPD,10
+Request 1 sent!
+6:HTTP/1.1 204 No Content
+X-Powered-By: Express
+Date: Mon, 02 Nov 2015 18:06:06 GMT
+Connection: close
+
+AT+CIPCLOSE
+
+CLOSED
+
+OK
+
+AT+CIPSTART="TCP","Hub_IP_Address",8080
+
+CONNECT
+
+OK
+AT+CIPSTART="TCP","Hub_IP_Address",8080
+
+ALREADY CONNECTED
+
+
+ERROR
+AT+CIPSTATUS
+
+STATUS:3
+POST http://Hub_IP_Address/Hub_Test/Signal2
+Content-Type: text/plain
+Content-Length: 2
+
+Hi
+
++CIPSTATUS:0,"TCP","Hub_IP_Address",8080,0
+
+OK
+AT+CIPSEND=90
+
+
+OK
+>
+ POST http://Hub_IP_Address/Hub_Test/Signal2
+Content-Type: text/plain
+Content-Length: 2
+
+Hi
+busy s...
+
+SEND OK
+
++IPD,10
+Request 2 sent!
+6:HTTP/1.1 204 No Content
+X-Powered-By: Express
+Date: Mon, 02 Nov 2015 18:06:14 GMT
+Connection: close
+
+AT+CIPCLOSE
+
+CLOSED
+
+OK
+
+AT+CIPSTART="TCP","Hub_IP_Address",8080
+
+@�sX�Ng��5R�'�̌���
+��d9�@C���Thinker Technology Co. Ltd.
+
+ready
+AT+CIPSTART="TCP","Hub_IP_Address",8080
+
+CONNECT
+
+OK
+AT+CIPSTART="TCP","Hub_IP_Address",8080
+
+ALREADY CONNECTED
+
+ERROR
+AT+CIPSTART="TCP","Hub_IP_Address",8080
+
+ALREADY CONNECTED
+
+ERROR
+� ��=��a��gBVx�o�txhp�����Thinker TAT+CIPSTART="TCP","Hub_IP_Address",8080
+
+CONNECT
+
+OK
+AT+CIPSTART="TCP","Hub_IP_Address",8080
+
+ALREADY CONNECTED
+
+
+ERROR
+AT+CIPSTATUS
+
+STATUS:3
+POST http://Hub_IP_Address/Hub_Test/Signal3
+Content-Type: text/plain
+Content-Length: 12
+
+How are you?
+
++CIPSTATUS:0,"TCP","Hub_IP_Address",8080,0
+
+OK
+AT+CIPSEND=101
+
+
+OK
+>
+ POST http://Hub_IP_Address/Hub_Test/Signal3
+Content-Type: text/plain
+Content-Length: 12
+
+How are you?
+busy s...
+
+SEND OK
+
++IPD,10
+Request 3 sent!
+6:HTTP/1.1 204 No Content
+X-Powered-By: Express
+Date: Mon, 02 Nov 2015 18:06:46 GMT
+Connection: close
+
+AT+CIPCLOSE
+
+CLOSED
+
+OK
