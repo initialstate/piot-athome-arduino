@@ -34,9 +34,9 @@ String signalData[NUM_SIGNALS];
 ////////////////////////////
 
 // WiFi SSID
-#define SSID "PiOT Workshop"
+#define SSID "WiFi_SSID"
 // WiFi password
-#define PASS "raspberry"
+#define PASS "WiFi_Password"
  
  
 ////////////////////////////
