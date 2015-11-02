@@ -145,7 +145,7 @@ void loop()
   // The takeTempHum() function reads from the sensor
   takeTempHum();
  
-  // The postData() function streams our events
+  // The toHub() function streams our events
   while(!toHub());   
 }
  
