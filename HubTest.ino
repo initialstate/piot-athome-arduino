@@ -13,8 +13,8 @@
 String hubIP = "Your_Hub's_IP_Address_Here";
 // Change the port number if you didn't set it to 8080
 int port = 8080;
-// Bucket key (hidden reference to your bucket that allows appending):
-String bucketKey = "hubtest";
+// Bucket key - using the hub, this will be the name of your bucket
+String bucketKey = "Hub_Test";
 
 
 ///////////////////////////
