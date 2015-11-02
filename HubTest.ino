@@ -39,6 +39,10 @@ String signalData[NUM_SIGNALS];
 #define PASS "raspberry"
  
  
+////////////////////////////
+/// Cactus Micro Settings //
+////////////////////////////
+
 // CH_PD pin - Used by Cactus Micro to enable ESP8266
 #define RESET 13
 // GPIO0
@@ -46,6 +50,11 @@ String signalData[NUM_SIGNALS];
 // RST pin - ESP8266 reset pin
 #define RST 5
  
+ 
+////////////////////////////
+//// AT Command Settings ///
+////////////////////////////
+
 // Timeout in milliseconds
 #define TIMEOUT     5000
 #define CONTINUE    false
@@ -54,7 +63,7 @@ String signalData[NUM_SIGNALS];
 
 // This only runs once at the very beginning
 void setup()  {
- 
+  // Start the Serial monitor
   Serial.begin(9600);
   // Communication with ESP8266
   Serial1.begin(9600);
@@ -105,9 +114,9 @@ void setup()  {
  
   // Echo IP address.
   echoCommand("AT+CIFSR", "", HALT); 
-
-  randomSeed(millis());           
   
+  // Start random number initialization for the example
+  randomSeed(millis());           
 }
  
 // This repeats
@@ -121,11 +130,10 @@ void loop()
   // Read from a port for input or output or generate your own values/messages
   // These signals are random numbers for the sake of example
   signalData[0] = String(random(18,25));
-  //signalData[1] = String(random(1, 100));
   signalData[1] = String("Hi");
   signalData[2] = "How are you?";
  
-  // The postData() function streams our events
+  // The toHub() function streams our events
   while(!toHub());   
 }
  
@@ -136,6 +144,7 @@ void loop()
 // They do not need to be edited - everything you would need to change for 
 // your project can be found above
  
+// Stream events to the hub
 boolean toHub () 
 {
   for (int i=0; i<NUM_SIGNALS; i++)
@@ -275,7 +284,8 @@ boolean connectWiFi()
     return false;
   }
 }
- 
+
+// Connect to a service; in our case, the hub at IP address on Port
 boolean connectService(String service, int port) 
 {  
   String serviceConnect = "AT+CIPSTART=\"TCP\",\"" + service + "\"," + port;
@@ -298,7 +308,8 @@ boolean connectService(String service, int port)
   delay(2000);
   return true;
 }
- 
+
+// Reset the ESP8266 Chip
 void reset()
 {
   digitalWrite(RESET,LOW);
