@@ -179,8 +179,8 @@ void takeTempHum()
   float hif = dht.computeHeatIndex(f, h);
 
   // Store our readings in the signalData array to be streamed
-  signalData[0] = String(h);
-  signalData[1] = String(f);
+  signalData[0] = String(f);
+  signalData[1] = String(h);
   signalData[2] = String(hif);
 }
 
