@@ -107,9 +107,11 @@ void setup()  {
   
   // Set up connection modes
   // Retrieves the firmware ID (version number) of the module.
+   // Trying to hide SSID
+  echoCommand("AT+CWSAP?", "", HALT);
   echoCommand("AT+GMR", "OK", CONTINUE);
-  // Station mode    
-  echoCommand("AT+CWMODE=3", "", HALT);
+  // Station mode - MODE 1 = Station; Mode 2 = AP; Mode 3 = Both 
+  echoCommand("AT+CWMODE=1", "", HALT);
   // Allow one connection    
   echoCommand("AT+CIPMUX=1", "", HALT);    
  
@@ -199,7 +201,7 @@ boolean toHub ()
       while(!connectService(hubIP,port)) {};
     };
  
-      // Build HTTP request.
+     // Build HTTP request.
     String toSend = "POST http://" + hubIP + "/" + bucketKey + "/" + signalName[i] + "\r\n";
     String payload = signalData[i];
     toSend += "Content-Type: text/plain\r\n";
