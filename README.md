@@ -1,5 +1,5 @@
 # piot-athome-arduino
-This is a resource for the PiOT at Home Workshop Materials for connecting Arduinos (Cactus Micros) to a NodeJS server acting as a hub.
+This is a resource for the PiOT at Home Workshop on connecting Arduinos (Cactus Micros) to a NodeJS server acting as a hub.
 
 Here you will find code materials for the tutorial as well as the tutorial itself in the [wiki](https://github.com/InitialState/piot-athome-arduino/wiki).
 
